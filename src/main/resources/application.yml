@@ -13,6 +13,7 @@ spring:
       hibernate:
         format_sql: true
       naming:
+        #엔터티로 선언한 자바코드에서 테이블을 제너레이팅 할 때 snakeCase로 제너레이팅
         physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
     database-platform: org.hibernate.dialect.H2Dialect
   h2:
