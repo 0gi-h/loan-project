@@ -8,7 +8,7 @@ spring:
     password:
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: create #엔터티에 정의되어 있는 카운셀 엔티티 테이블로 변환
     properties:
       hibernate:
         format_sql: true
@@ -20,5 +20,11 @@ spring:
     console:
       path: /h2-console
       enabled: true
+  #파일관련
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+      location: C:\Users\황기영\IdeaProjects\fastcampus-loan\filetest
 logging.level:
   org.hibernate.SQL: debug
