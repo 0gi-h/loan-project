@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ModelMapperConfig {
 
-  @Bean
+  @Bean //ModelMapper에 대한 설정 정의
   public ModelMapper modelMapper() {
     ModelMapper modelMapper = new ModelMapper();
     modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);

@@ -22,7 +22,7 @@ public class Counsel extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, updatable = false)
-    private Long counselId; // physical-strategy로 인해 counsel_id로 테이블 생성
+    private Long counselId; // physical-strategy로 인해 underscore snake case인 counsel_id로 테이블 생성
 
     @Column(nullable = false, columnDefinition = "datetime COMMENT '신청일자'")
     private LocalDateTime appliedAt;
