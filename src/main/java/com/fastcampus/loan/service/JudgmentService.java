@@ -1,5 +1,6 @@
 package com.fastcampus.loan.service;
 
+import com.fastcampus.loan.dto.ApplicationDTO;
 import com.fastcampus.loan.dto.JudgmentDTO;
 
 public interface JudgmentService {
@@ -11,4 +12,10 @@ public interface JudgmentService {
 
     //신청ID를 통한 조회
     JudgmentDTO.Response getJudgmentOfApplication(Long applicationId);
+
+    JudgmentDTO.Response update(Long judgmentId, JudgmentDTO.Request request);
+
+    void delete(Long judgmentId);
+
+    ApplicationDTO.GrantAmount grant(Long judgmentId);
 }
