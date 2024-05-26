@@ -22,6 +22,7 @@ public class Application extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false, updatable = false)
     private Long applicationId;
 
     @Column(columnDefinition = "varchar(12) DEFAULT NULL COMMENT '신청자'")
@@ -48,6 +49,10 @@ public class Application extends BaseEntity{
     @Column(columnDefinition = "datetime DEFAULT NULL COMMENT '신청일자'")
     private LocalDateTime appliedAt;
 
-    @Column(columnDefinition = "decimal(15, 2) DEFAULT NULL COOMENT '승인 금액'")
+    @Column(columnDefinition = "decimal(15, 2) DEFAULT NULL COMMENT '승인 금액'")
     private BigDecimal approvalAmount;
+
+    @Column(columnDefinition = "datetime DEFAULT NULL COMMENT '계약 일자'")
+    private LocalDateTime contractedAt;
 }
+

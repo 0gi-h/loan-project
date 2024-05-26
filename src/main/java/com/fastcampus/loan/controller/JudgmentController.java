@@ -45,4 +45,5 @@ public class JudgmentController extends AbstractController {
     public ResponseDTO<ApplicationDTO.GrantAmount> grant(@PathVariable Long judgmentId) {
         return ok(judgmentService.grant(judgmentId));
     }
+
 }
