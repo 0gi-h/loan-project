@@ -86,4 +86,10 @@ public class ApplicationController extends AbstractController{
         fileStorageService.deleteAll(applicationId);
         return ok();
     }
+
+    //대출 계약 (신청 등록 -> 심사 등록 -> 한도 부여 -> 대출 계약 순으로 진행)
+    @PutMapping("/{applicationId}/contract")
+    public ResponseDTO<ApplicationDTO.Response> contract(@PathVariable Long applicationId) {
+        return ok(applicationService.contract(applicationId));
+    }
 }

@@ -15,6 +15,7 @@ public class ApplicationDTO implements Serializable {
     @AllArgsConstructor
     @Builder
     @Getter
+    @Setter
     public static class Request {
 
         private String name;
@@ -44,6 +45,8 @@ public class ApplicationDTO implements Serializable {
         private BigDecimal hopeAmount;
 
         private LocalDateTime appliedAt;
+
+        private LocalDateTime contractedAt;
 
         private LocalDateTime createdAt;
 
